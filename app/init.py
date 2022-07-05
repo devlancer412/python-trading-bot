@@ -1,0 +1,20 @@
+# Don't edit
+__author__ = "Joseph Anderson"
+__copyright__ = "Copyright 2022, Modern Time Team"
+__license__ = "INTERNAL"
+__version__ = "0.1.0"
+__maintainer__ = __author__
+__email__ = "devanderson0412@gmail.com"
+__status__ = "alpha"
+
+
+from fastapi import FastAPI
+from app.__internal import bootstrap
+
+app = FastAPI(
+    title="Trading API",
+    description="Testing for trading bot API",
+    version="-".join([__version__, __status__]),
+)
+
+bootstrap(app)
